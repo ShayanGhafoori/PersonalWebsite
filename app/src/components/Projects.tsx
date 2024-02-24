@@ -1,18 +1,6 @@
-const Projects = () => {
+const WW = () => {
   return (
-    <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold'>
-      <a href='/' className='font-bold text-[16px] hover:text-[#E5BAC9]'>
-        {"<"} Home
-      </a>
-      <h1 className='my-5 text-[48px] md:text-[64px] font-black'>
-        Projects 🚀
-      </h1>
-      <h2 className='text-white pb-4'>
-        A list of some personal and professional projects I am most proud of
-      </h2>
-
-      <hr className='border-black border-2' />
-
+    <div>
       <h1 className='my-5'>
         <a
           href='https://wagerwire.com'
@@ -49,6 +37,25 @@ const Projects = () => {
       >
         See more details
       </a>
+    </div>
+  );
+};
+
+const Projects = () => {
+  return (
+    <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold'>
+      <a href='/' className='font-bold text-[16px] hover:text-[#E5BAC9]'>
+        {"<"} Home
+      </a>
+      <h1 className='my-5 text-[48px] md:text-[64px] font-black'>
+        Projects 🚀
+      </h1>
+      <h2 className='text-white pb-4'>
+        A list of some personal and professional projects I am most proud of
+      </h2>
+
+      <hr className='border-black border-2' />
+      <WW />
     </div>
   );
 };

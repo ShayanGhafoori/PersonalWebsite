@@ -1,3 +1,35 @@
+const Home = () => {
+  return (
+    <div className='flex flex-row justify-evenly h-screen overflow-scroll mt-24'>
+      <div className='pr-6'>
+        <div className='absolute top-60'> Small screen </div>
+        <img
+          className=''
+          src='/images/www.wagerwire.com_small.png'
+          alt='ww-home-large'
+        />
+      </div>
+      <div className='pr-6'>
+        <div className='absolute top-60'> Medium screen </div>
+        <img
+          className=''
+          src='/images/www.wagerwire.com_medium.png'
+          alt='ww-home-large'
+        />
+      </div>
+
+      <div className='pr-6'>
+        <div className='absolute top-60'> Large screen </div>
+        <img
+          className=''
+          src='/images/www.wagerwire.com_large.png'
+          alt='ww-home-large'
+        />
+      </div>
+    </div>
+  );
+};
+
 const WagerWire = () => {
   return (
     <div className='font-semibold'>
@@ -16,33 +48,7 @@ const WagerWire = () => {
         </div>
         <hr className='border-black border-2' />
       </div>
-      <div className='flex flex-row justify-evenly h-screen overflow-scroll mt-24'>
-        <div className='pr-6'>
-          <div className='absolute top-60'> Small screen </div>
-          <img
-            className=''
-            src='/images/www.wagerwire.com_small.png'
-            alt='ww-home-large'
-          />
-        </div>
-        <div className='pr-6'>
-          <div className='absolute top-60'> Medium screen </div>
-          <img
-            className=''
-            src='/images/www.wagerwire.com_medium.png'
-            alt='ww-home-large'
-          />
-        </div>
-
-        <div className='pr-6'>
-          <div className='absolute top-60'> Large screen </div>
-          <img
-            className=''
-            src='/images/www.wagerwire.com_large.png'
-            alt='ww-home-large'
-          />
-        </div>
-      </div>
+      <Home />
     </div>
   );
 };
