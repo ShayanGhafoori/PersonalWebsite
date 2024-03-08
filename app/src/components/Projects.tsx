@@ -12,7 +12,9 @@ const WW = () => {
 
       <div className='mb-4 italic font-extralight'>
         Professional project from my time at WagerWire, a sports betting startup
-        where I worked as both a software engineer and data analyst
+        where I worked as both a software engineer and data analyst building a
+        proprietary algorithm for valuing sports bets, concurrently developing
+        intuitive GUIs that enabled public utilization
       </div>
       <div className='mb-4'>
         Developed every page of
@@ -23,13 +25,20 @@ const WW = () => {
           </a>
         </span>
       </div>
-      <div className='mb-2'>
-        Additionally, as a key contributor to the data team, I played a pivotal
-        role in formulating a proprietary algorithm used to assess the value of
-        sports bets before closure. Applying this methodology, I crafted the
-        /calculator and /graph pages, empowering users to independently compute
-        their bets' dollar value and gain visual insights into the fluctuation
-        of values over time for their bets and related ones.
+      <div className='mb-4'>
+        As a vital member of the data team, I built a proprietary sports betting
+        algorithm, drawing insights from 22 years of diverse betting data
+        spanning multiple sports and bet-types.
+      </div>
+
+      <div className='mb-4'>
+        As a vital member of the engineering team, I spearheaded the development
+        of the <span className='italic font-extralight'> /calculator</span> and
+        <span className='italic font-extralight'> /graph </span> pages of
+        <span className='italic font-extralight'> wagerwire.com </span>. These
+        user-friendly interfaces empower individuals to independently calculate
+        the monetary worth of their bets and visualize value fluctuations over
+        time across various sports, all achieved using the algorithm.
       </div>
       <a
         href='/details-wagerwire'
