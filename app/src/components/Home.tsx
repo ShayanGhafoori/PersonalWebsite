@@ -18,13 +18,9 @@ const Home = () => {
           stuff 🛠️👾
         </p>
         <p className='pb-6'>
-          Check out what I've been up to--spoiler: it's cooler than cat videos.
-          😎 <br />
+          Check out what I've been up to --
           <span>
-            <a
-              href='/projects'
-              className='underline text-[#E5BAC9] text-[18px]'
-            >
+            <a href='/projects' className='underline text-[#E5BAC9] ml-2'>
               Projects
             </a>
           </span>
