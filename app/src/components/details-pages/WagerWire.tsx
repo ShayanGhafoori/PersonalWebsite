@@ -7,7 +7,7 @@ const Home = () => {
       <p className='mt-8 text-[12px]'>
         So here is a brief description of everything
       </p>
-      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-24'>
+      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-24 text-white'>
         <div className='pr-6'>
           <div className='absolute top-72'> Small screen </div>
           <img
@@ -36,9 +36,116 @@ const Home = () => {
     </div>
   );
 };
+const Calculator = () => {
+  return (
+    <div>
+      <p className='mt-8 text-[12px]'>
+        So here is a brief description of everything
+      </p>
+      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-24 text-white'>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Small screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_calculator_small.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Medium screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_calculator_medium.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Large screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_calculator_large.png'
+            alt='ww-home-large'
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Graph = () => {
+  return (
+    <div>
+      <p className='mt-8 text-[12px]'>
+        So here is a brief description of everything
+      </p>
+      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-24 text-white'>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Small screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_graph_small.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Medium screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_graph_medium.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Large screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_graph_large.png'
+            alt='ww-home-large'
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Community = () => {
+  return (
+    <div>
+      <p className='mt-8 text-[12px]'>
+        So here is a brief description of everything
+      </p>
+      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-24 text-white'>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Small screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_community_small.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Medium screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_community_medium.png'
+            alt='ww-home-large'
+          />
+        </div>
+        <div className='pr-6'>
+          <div className='absolute top-72'> Large screen </div>
+          <img
+            className=''
+            src='/images/www.wagerwire.com_community_large.png'
+            alt='ww-home-large'
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const WagerWire = () => {
-  const [subPage, setSubPage] = useState("HOME");
+  const [subPage, setSubPage] = useState("CALC");
   return (
     <div className='font-semibold'>
       <a
@@ -123,6 +230,9 @@ const WagerWire = () => {
         </div>
       </div>
       {subPage === "HOME" && <Home />}
+      {subPage === "GRAPH" && <Graph />}
+      {subPage === "CALC" && <Calculator />}
+      {subPage === "COMM" && <Community />}
     </div>
   );
 };
