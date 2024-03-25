@@ -8,6 +8,10 @@ const WW = () => {
         >
           WagerWire.com
         </a>
+        <div className='text-yellow-300 mt-1'>
+          {" "}
+          React.js, Tailwind, Sanity.io, Python, R{" "}
+        </div>
       </h1>
 
       <div className='mb-4 italic font-extralight'>
@@ -39,6 +43,15 @@ const WW = () => {
         user-friendly interfaces empower individuals to independently calculate
         the monetary worth of their bets and visualize value fluctuations over
         time across various sports, all achieved using the algorithm.
+      </div>
+      <div className='mb-4'>
+        Additionally, I created the{" "}
+        <span className='italic font-extralight'> / </span> (home) page--
+        effectively encapsulating WagerWire's mission and the app's features--
+        as well as a vibrant{" "}
+        <span className='italic font-extralight'> /community </span> page that
+        hosts an array of sports-related content, fostering engagement and
+        interaction among users.
       </div>
       <a
         href='/details-wagerwire'
