@@ -1,6 +1,6 @@
 const WW = () => {
   return (
-    <div>
+    <div className='text-[12px]'>
       <h1 className='my-5'>
         <a
           href='https://wagerwire.com'
@@ -43,8 +43,6 @@ const WW = () => {
         user-friendly interfaces empower individuals to independently calculate
         the monetary worth of their bets and visualize value fluctuations over
         time across various sports, all achieved using the algorithm.
-      </div>
-      <div className='mb-4'>
         Additionally, I created the{" "}
         <span className='italic font-extralight'> / </span> (home) page--
         effectively encapsulating WagerWire's mission and the app's features--
@@ -55,7 +53,7 @@ const WW = () => {
       </div>
       <a
         href='/details-wagerwire'
-        className='font-bold text-[15px] text-yellow-300 underline pt-4'
+        className='font-bold text-[16px] text-[#E5BAC9] underline pt-4'
       >
         See more details
       </a>
@@ -65,11 +63,11 @@ const WW = () => {
 
 const Projects = () => {
   return (
-    <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold'>
-      <a href='/' className='font-bold text-[16px] hover:text-[#E5BAC9]'>
+    <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold text-[16px]'>
+      <a href='/' className='font-bold hover:text-[#E5BAC9]'>
         {"<"} Home
       </a>
-      <h1 className='my-5 text-[48px] md:text-[64px] font-black'>
+      <h1 className='mt-5 mb-2 text-[36px] md:text-[48px] font-black'>
         Projects 🚀
       </h1>
       <h2 className='text-white pb-4'>

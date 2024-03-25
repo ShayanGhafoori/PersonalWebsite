@@ -25,7 +25,7 @@ const Home = () => {
           </span>{" "}
         </p>
       </div>
-      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-10 text-white'>
+      <div className='flex flex-row justify-evenly mt-10 text-white'>
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img src='/images/www.wagerwire.com_small.png' alt='ww-home-large' />
@@ -85,7 +85,7 @@ const Calculator = () => {
         </p>
       </div>
 
-      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-10 text-white'>
+      <div className='flex flex-row justify-evenly mt-10 text-white'>
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
@@ -156,7 +156,7 @@ const Graph = () => {
           </span>{" "}
         </p>
       </div>
-      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-10 text-white'>
+      <div className='flex flex-row justify-evenly mt-10 text-white'>
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
@@ -209,7 +209,7 @@ const Community = () => {
         </p>
       </div>
 
-      <div className='flex flex-row justify-evenly h-[500px] overflow-scroll mt-10 text-white'>
+      <div className='flex flex-row justify-evenly mt-10 text-white'>
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
