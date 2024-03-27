@@ -61,6 +61,65 @@ const WW = () => {
   );
 };
 
+const GoblinFrenzy = () => {
+  return (
+    <div className='text-[12px]'>
+      <h1 className='my-5'>
+        <a
+          href='https://github.com/ShayanGhafoori/Goblin-Frenzy'
+          className='font-bold text-[28px] hover:text-[#E5BAC9]'
+        >
+          Goblin Frenzy
+        </a>
+        <br />
+        <a
+          href='https://github.com/ShayanGhafoori/Goblin-Frenzy'
+          className='font-bold text-[#E5BAC9]'
+        >
+          https://github.com/ShayanGhafoori/Goblin-Frenzy
+        </a>
+        <div className='text-yellow-300 mt-1'> Python</div>
+      </h1>
+
+      <div className='mb-4 italic font-extralight'>
+        A Personal Project I developed as a hobby while exploring Python's
+        Pygame module. Experience endless rounds of increasing difficulty in
+        this Python-based computer game. Assume the role of a ninja tasked with
+        fending off waves of goblins. As the game progresses, goblin numbers and
+        strength escalate, challenging players to adapt and survive. Utilize
+        various objects strategically to enhance gameplay and overcome
+        obstacles.
+      </div>
+      <ul className='mb-4 list-disc'>
+        <li className='my-2'>
+          Developed a custom -- quasi Dijkstra's -- algorithm to ensure goblins
+          take the shortest path to the player while preventing infinite looping
+          of sprite animations
+        </li>
+        <li className='my-2'>
+          Created algorithms for spawning goblins, ensuring none overlap
+        </li>
+        <li className='my-2'>
+          Maximized gameplay experience by accounting for variables such as
+          angle of attack, health status, user input, and collisions when
+          synchronizing sprite animations with character movement
+        </li>
+        <li className='my-2'>
+          Utilized object-oriented programming to design user, enemy, and object
+          classes for improved code organization and maintainability
+        </li>
+      </ul>
+      <h1 className='my-4 text-yellow-300'> Check out the video Demo!</h1>
+      <video
+        src='/images/goblin-frenzy-demo.mp4'
+        className='w-[500px] rounded-[4px]'
+        controls
+        poster='/images/goblin-frenzy-poster.png'
+      ></video>
+    </div>
+  );
+};
+
 const Projects = () => {
   return (
     <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold text-[16px]'>
@@ -76,6 +135,8 @@ const Projects = () => {
 
       <hr className='border-black border-2' />
       <WW />
+      <hr className='border-black border-2 mt-6' />
+      <GoblinFrenzy />
     </div>
   );
 };

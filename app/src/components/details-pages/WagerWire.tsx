@@ -139,8 +139,12 @@ const Graph = () => {
           -- in addition to my contributions to the algorithm and calculator
           page -- I engineered a dynamic graph page that enables users to
           visualize and track the monetary value of their bets over time,
-          offering invaluable insights into bet value fluctuations. Users can
-          compare different teams and outcomes, thanks to the integration of
+          offering invaluable insights into bet value fluctuations. This page
+          utilizes calls to an internal REST API that returns odds and
+          comprehensive team information. From there I process the API's
+          contents and transform it into a useable format, and apply our
+          proprietary bet pricing algorithm. Users can build their own graphs
+          comparing different teams and outcomes, thanks to the integration of
           odds and pertinent team data. Notably, the graph page includes
           functionality to generate shareable links, ensuring recipients
           accessing the link view the exact same graph. This seamless sharing
@@ -237,7 +241,7 @@ const Community = () => {
 };
 
 const WagerWire = () => {
-  const [subPage, setSubPage] = useState("GRAPH");
+  const [subPage, setSubPage] = useState("CALC");
   return (
     <div className='font-semibold'>
       <a
