@@ -83,6 +83,11 @@ const Calculator = () => {
             </a>
           </span>{" "}
         </p>
+        <br />
+        <p className='text-[#A50431] italic'>
+          Go to the Graph Page to see more applications of the bet-pricing
+          alogirthm
+        </p>
       </div>
 
       <div className='flex flex-row justify-evenly mt-10 text-white'>
