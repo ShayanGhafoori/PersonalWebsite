@@ -28,15 +28,15 @@ const Home = () => {
       <div className='flex flex-row justify-evenly mt-10 text-white'>
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
-          <img src='/images/www.wagerwire.com_small.png' alt='ww-home-large' />
+          <img src='images/www.wagerwire.com_small.png' alt='ww-home-large' />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Medium screen </div>
-          <img src='/images/www.wagerwire.com_medium.png' alt='ww-home-large' />
+          <img src='images/www.wagerwire.com_medium.png' alt='ww-home-large' />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Large screen </div>
-          <img src='/images/www.wagerwire.com_large.png' alt='ww-home-large' />
+          <img src='images/www.wagerwire.com_large.png' alt='ww-home-large' />
         </div>
       </div>
     </div>
@@ -94,21 +94,21 @@ const Calculator = () => {
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
-            src='/images/www.wagerwire.com_calculator_small.png'
+            src='images/www.wagerwire.com_calculator_small.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Medium screen </div>
           <img
-            src='/images/www.wagerwire.com_calculator_medium.png'
+            src='images/www.wagerwire.com_calculator_medium.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Large screen </div>
           <img
-            src='/images/www.wagerwire.com_calculator_large.png'
+            src='images/www.wagerwire.com_calculator_large.png'
             alt='ww-home-large'
           />
         </div>
@@ -169,21 +169,21 @@ const Graph = () => {
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
-            src='/images/www.wagerwire.com_graph_small.png'
+            src='images/www.wagerwire.com_graph_small.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Medium screen </div>
           <img
-            src='/images/www.wagerwire.com_graph_medium.png'
+            src='images/www.wagerwire.com_graph_medium.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Large screen </div>
           <img
-            src='/images/www.wagerwire.com_graph_large.png'
+            src='images/www.wagerwire.com_graph_large.png'
             alt='ww-home-large'
           />
         </div>
@@ -222,21 +222,21 @@ const Community = () => {
         <div className='pr-6'>
           <div className='mb-2'> Small screen </div>
           <img
-            src='/images/www.wagerwire.com_community_small.png'
+            src='images/www.wagerwire.com_community_small.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Medium screen </div>
           <img
-            src='/images/www.wagerwire.com_community_medium.png'
+            src='images/www.wagerwire.com_community_medium.png'
             alt='ww-home-large'
           />
         </div>
         <div className='pr-6'>
           <div className='mb-2'> Large screen </div>
           <img
-            src='/images/www.wagerwire.com_community_large.png'
+            src='images/www.wagerwire.com_community_large.png'
             alt='ww-home-large'
           />
         </div>
