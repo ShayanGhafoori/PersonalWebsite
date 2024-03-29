@@ -7,7 +7,7 @@ const App = () => {
     <body className='bg-[#798ECE] h-full min-h-screen bg-scroll px-10 py-10 md:px-20 md:py-20 font-lucida-sans-typewriter'>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Home />} />
+          <Route path='/PersonalWebsite' exact element={<Home />} />
           <Route path='/projects' exact element={<Projects />} />
           <Route path='/about' exact element={<About />} />
           <Route path='/details-wagerwire' exact element={<WagerWire />} />
