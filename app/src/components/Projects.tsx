@@ -118,10 +118,10 @@ const GoblinFrenzy = () => {
       </ul>
       <h1 className='my-4 text-yellow-300'> Check out the video Demo!</h1>
       <video
-        src='#/images/goblin-frenzy-demo.mp4'
+        src='images/goblin-frenzy-demo.mp4'
         className='w-[500px] rounded-[4px]'
         controls
-        poster='#/images/goblin-frenzy-poster.png'
+        poster='images/goblin-frenzy-poster.png'
       ></video>
     </div>
   );
