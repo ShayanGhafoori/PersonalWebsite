@@ -1,18 +1,22 @@
 import { Home, Projects, About } from "./components";
 import { WagerWire } from "./components/details-pages";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <body className='bg-[#798ECE] h-full min-h-screen bg-scroll px-10 py-10 md:px-20 md:py-20 font-lucida-sans-typewriter'>
-      <Router>
+      <HashRouter basename='/PersonalWebsite'>
         <Routes>
-          <Route path='/PersonalWebsite' exact element={<Home />} />
-          <Route path='/projects' exact element={<Projects />} />
-          <Route path='/about' exact element={<About />} />
-          <Route path='/details-wagerwire' exact element={<WagerWire />} />
+          <Route path='/' exact={true} element={<Home />} />
+          <Route path='/projects' exact={true} element={<Projects />} />
+          <Route path='/about' exact={true} element={<About />} />
+          <Route
+            path='/details-wagerwire'
+            exact={true}
+            element={<WagerWire />}
+          />
         </Routes>
-      </Router>
+      </HashRouter>
     </body>
   );
 };
