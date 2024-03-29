@@ -1,6 +1,6 @@
 import { Home, Projects, About } from "./components";
 import { WagerWire } from "./components/details-pages";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
