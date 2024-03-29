@@ -34,7 +34,7 @@ const Home = () => {
         <p className='pb-2'>
           Check out what I've been up to --
           <span>
-            <a href='/projects' className='underline text-[#E5BAC9] ml-2'>
+            <a href='/#/projects' className='underline text-[#E5BAC9] ml-2'>
               Projects
             </a>
           </span>

@@ -5,9 +5,9 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <body className='bg-[#798ECE] h-full min-h-screen bg-scroll px-10 py-10 md:px-20 md:py-20 font-lucida-sans-typewriter'>
-      <HashRouter basename='/'>
+      <HashRouter>
         <Routes>
-          <Route path='/PersonalWebsite' exact={true} element={<Home />} />
+          <Route path='/' exact={true} element={<Home />} />
           <Route path='/projects' exact={true} element={<Projects />} />
           <Route path='/about' exact={true} element={<About />} />
           <Route

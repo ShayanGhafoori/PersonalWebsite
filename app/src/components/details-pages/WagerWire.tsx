@@ -250,7 +250,7 @@ const WagerWire = () => {
   return (
     <div className='font-semibold'>
       <a
-        href='/projects'
+        href='#/projects'
         className='font-bold text-[14px] hover:text-[#E5BAC9]'
       >
         {"<"} Projects

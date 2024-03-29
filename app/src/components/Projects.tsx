@@ -59,7 +59,7 @@ const WW = () => {
         </li>
       </ul>
       <a
-        href='/details-wagerwire'
+        href='/#/details-wagerwire'
         className='font-bold text-[17px] text-white hover:text-[#E5BAC9] underline pt-4 italic font-normal underline-offset-2'
       >
         !! See more details !!
@@ -208,7 +208,7 @@ const Projects = () => {
   const [seeMore, setSeeMore] = useState(false);
   return (
     <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold text-[16px]'>
-      <a href='/' className='font-bold hover:text-[#E5BAC9]'>
+      <a href='/#/PersonalWebsite' className='font-bold hover:text-[#E5BAC9]'>
         {"<"} Home
       </a>
       <h1 className='mt-5 mb-2 text-[36px] md:text-[48px] font-black'>
