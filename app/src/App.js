@@ -5,7 +5,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <body className='bg-[#798ECE] h-full min-h-screen bg-scroll px-10 py-10 md:px-20 md:py-20 font-lucida-sans-typewriter'>
-      <HashRouter>
+      <HashRouter basename='/PersonalWebsite'>
         <Routes>
           <Route path='/' exact={true} element={<Home />} />
           <Route path='/projects' exact={true} element={<Projects />} />
