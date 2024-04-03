@@ -204,44 +204,64 @@ const MiniRogue = () => {
     </div>
   );
 };
+const ProjectBox: React.FC<{
+  projectName: string;
+  defaultState?: boolean;
+  children?: React.ReactNode;
+}> = ({ projectName, defaultState, children }) => {
+  const [viewProject, setViewProject] = useState(defaultState ?? false);
+
+  return (
+    <div className='uppercase'>
+      <div className='flex flex-row justify-between items-end'>
+        <h1 className='mt-6 tracking-[-0.3rem] leading-[5rem] font-semibold text-white text-[90px]'>
+          {projectName}
+        </h1>
+        <button
+          className='uppercase text-center flex flex-row item-center justify-center'
+          onClick={() => setViewProject(!viewProject)}
+        >
+          {viewProject ? "- View Less" : "+ View Project"}
+        </button>
+      </div>
+      {viewProject && children}
+      <hr className='border-white border-2 mt-4' />
+    </div>
+  );
+};
+
+const SummaryBox: React.FC<{
+  image?: boolean;
+  children?: React.ReactNode;
+  summary: string;
+}> = ({ image, summary, children }) => {
+  return (
+    <div className='uppercase'>
+      <div className='flex flex-row justify-between items-end'>
+        <h1 className='mt-6 tracking-[-0.3rem] leading-[5rem] font-semibold text-white text-[90px]'>
+          {summary}
+        </h1>
+      </div>
+      {children}
+      <hr className='border-white border-2 mt-4' />
+    </div>
+  );
+};
+
 const Projects = () => {
   const [seeMore, setSeeMore] = useState(false);
   return (
-    <div className='md:max-w-[500px] lg:max-w-[600px] font-semibold text-[16px]'>
-      <a href='#/' className='font-bold hover:text-[#E5BAC9]'>
-        {"<"} Home
-      </a>
-      <h1 className='mt-5 mb-2 text-[36px] md:text-[48px] font-black'>
-        Projects 🚀
-      </h1>
-      <h2 className='text-white pb-4'>
-        A list of some personal and professional projects I am most proud of
-      </h2>
-
-      <hr className='border-black border-2' />
-      <WW />
-      <hr className='border-black border-2 mt-6' />
-      <GoblinFrenzy />
-      {!seeMore && (
-        <div>
-          <hr className='border-black border-2 mt-6' />
-          <button
-            className='text-[14px] mt-12 text-[#E5BAC9]'
-            onClick={() => setSeeMore(true)}
-          >
-            {" "}
-            Click to see more projects ▼{" "}
-          </button>
-        </div>
-      )}
-      {seeMore && (
-        <div>
-          <hr className='border-black border-2 mt-6' />
-          <Bsports />
-          <hr className='border-black border-2 mt-6' />
-          <MiniRogue />
-        </div>
-      )}
+    <div className='h-full min-h-screen pt-24'>
+      <div className='uppercase'>
+        <h1 className='mt-12 tracking-[-0.3rem] leading-[5rem] font-semibold text-[#5C5C5C] text-[90px]'>
+          Previous Projects
+        </h1>
+        <hr className='border-[#5C5C5C] border-2 mt-6' />
+      </div>
+      <ProjectBox projectName={"WagerWire"} defaultState={true}></ProjectBox>
+      <ProjectBox projectName={"Goblin Frenzy"}></ProjectBox>
+      <ProjectBox projectName={"Bruin Sports"}></ProjectBox>
+      <ProjectBox projectName={"Mini Rogue"}></ProjectBox>
     </div>
   );
 };

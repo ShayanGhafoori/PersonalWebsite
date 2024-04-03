@@ -1,9 +1,15 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "868px",
+      lg: "1200px",
+      xl: "1480px",
+    },
     extend: {
       fontFamily: {
-        "lucida-sans-typewriter": ['"Lucida Sans Typewriter"', "monospace"],
+        "neue-haas-grotesk": ["Neue Haas Grotesk Display Pro", "sans-serif"],
       },
       fontWeight: {
         thin: "100",
