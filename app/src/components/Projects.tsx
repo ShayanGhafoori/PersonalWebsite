@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const WW = () => {
   return (
@@ -251,17 +252,19 @@ const SummaryBox: React.FC<{
 const Projects = () => {
   const [seeMore, setSeeMore] = useState(false);
   return (
-    <div className='h-full min-h-screen pt-24'>
-      <div className='uppercase'>
-        <h1 className='mt-12 tracking-[-0.3rem] leading-[5rem] font-semibold text-[#5C5C5C] text-[90px]'>
-          Previous Projects
-        </h1>
-        <hr className='border-[#5C5C5C] border-2 mt-6' />
-      </div>
-      <ProjectBox projectName={"WagerWire"} defaultState={true}></ProjectBox>
-      <ProjectBox projectName={"Goblin Frenzy"}></ProjectBox>
-      <ProjectBox projectName={"Bruin Sports"}></ProjectBox>
-      <ProjectBox projectName={"Mini Rogue"}></ProjectBox>
+    <div className='h-full min-h-screen pt-36 pb-10'>
+      <Fade direction='left' damping={0.2} cascade triggerOnce fraction={0.75}>
+        <div className='uppercase mb-4'>
+          <h1 className='mt-12 tracking-[-0.3rem] leading-[5rem] font-semibold text-[#5C5C5C] text-[90px]'>
+            Previous Projects
+          </h1>
+          <hr className='border-[#5C5C5C] border-2 mt-2' />
+        </div>
+        <ProjectBox projectName={"WagerWire"} defaultState={true}></ProjectBox>
+        <ProjectBox projectName={"Goblin Frenzy"}></ProjectBox>
+        <ProjectBox projectName={"Bruin Sports"}></ProjectBox>
+        <ProjectBox projectName={"Mini Rogue"}></ProjectBox>
+      </Fade>
     </div>
   );
 };
