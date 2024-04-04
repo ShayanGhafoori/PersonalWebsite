@@ -2,7 +2,7 @@ import { Header, Currently, Projects } from "./index";
 
 const Home = () => {
   return (
-    <div className=''>
+    <div className='w-full '>
       <Header />
       <Currently />
       <Projects />

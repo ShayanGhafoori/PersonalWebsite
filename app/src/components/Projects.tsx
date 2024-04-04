@@ -213,9 +213,9 @@ const ProjectBox: React.FC<{
   const [viewProject, setViewProject] = useState(defaultState ?? false);
 
   return (
-    <div className='uppercase'>
+    <div className='uppercase '>
       <div className='flex flex-row justify-between items-end'>
-        <h1 className='mt-6 tracking-[-0.3rem] leading-[5rem] font-semibold text-white text-[90px]'>
+        <h1 className='mt-6 tracking-[-0.3rem] leading-[5rem] font-semibold text-white text-[60px]'>
           {projectName}
         </h1>
         <button
@@ -225,42 +225,180 @@ const ProjectBox: React.FC<{
           {viewProject ? "- View Less" : "+ View Project"}
         </button>
       </div>
-      {viewProject && children}
-      <hr className='border-white border-2 mt-4' />
-    </div>
-  );
-};
-
-const SummaryBox: React.FC<{
-  image?: boolean;
-  children?: React.ReactNode;
-  summary: string;
-}> = ({ image, summary, children }) => {
-  return (
-    <div className='uppercase'>
-      <div className='flex flex-row justify-between items-end'>
-        <h1 className='mt-6 tracking-[-0.3rem] leading-[5rem] font-semibold text-white text-[90px]'>
-          {summary}
-        </h1>
+      <div
+        className={`overflow-hidden transition-all duration-100 ${
+          viewProject ? "max-h-full" : "max-h-0"
+        }`}
+      >
+        {children}
       </div>
-      {children}
-      <hr className='border-white border-2 mt-4' />
+      <hr className='border-white border-1 mt-4' />
     </div>
   );
 };
 
 const Projects = () => {
-  const [seeMore, setSeeMore] = useState(false);
   return (
     <div className='h-full min-h-screen pt-36 pb-10'>
-      <Fade direction='left' damping={0.2} cascade triggerOnce fraction={0.75}>
+      <Fade triggerOnce fraction={0.75}>
         <div className='uppercase mb-4'>
-          <h1 className='mt-12 tracking-[-0.3rem] leading-[5rem] font-semibold text-[#5C5C5C] text-[90px]'>
+          <h1 className='mt-12 tracking-[-0.3rem] leading-[5rem] font-semibold text-[#5C5C5C] text-[75px]'>
             Previous Projects
           </h1>
           <hr className='border-[#5C5C5C] border-2 mt-2' />
         </div>
-        <ProjectBox projectName={"WagerWire"} defaultState={true}></ProjectBox>
+      </Fade>
+      <Fade direction='left' damping={0.2} cascade triggerOnce>
+        <ProjectBox projectName={"WagerWire"} defaultState={true}>
+          <div className='uppercase mt-4 px-2'>
+            <div className='flex flex-row justify-between text-[14px]'>
+              <div>
+                <div className='mb-4 normal-case text-[#E5C88F] text-[16px] font-semibold'>
+                  React.js, Tailwind, Sanity.io, Python, R
+                </div>
+                <p className=' font-normal text-white ] w-[40%]'>
+                  Professional project from my time at WagerWire, a sports
+                  betting startup where I worked as both a{" "}
+                  <span className='text-[#E5C88F]'> Software Engineer</span> and{" "}
+                  <span className='text-[#E5C88F]'> Data analyst</span> building
+                  a proprietary algorithm for valuing sports bets, concurrently
+                  developing intuitive GUIs that enabled public utilization
+                </p>
+                <div className='underline mt-4'>
+                  <a href='https://wagerwire.com'>view wagerwire.com</a>
+                </div>
+              </div>
+            </div>
+            <hr className='border-white border-1 my-4' />
+            <div className='flex flex-row justify-between text-[14px]'>
+              <div className='w-[40%] order-last'>
+                <p className='font-normal text-white mb-4'>
+                  <span className='text-[#E5C88F]'>
+                    As an integral member of the data team
+                  </span>{" "}
+                  at WagerWire, I played a pivotal role in the creation of our
+                  proprietary sports bet pricing algorithm. Collaborating
+                  closely with colleagues, I meticulously gathered and analyzed
+                  22 years of sports betting data, resulting in a model capable
+                  of accurately pricing/valuing bets across various sports and
+                  bet types. The model factors in variables such as line
+                  movement, odds movement, bet type, and specific sports
+                  dynamics. The formulation of this model involved the
+                  development of other models, such as ones to accurately
+                  predict the distribution of percent change in bet value (from
+                  any given buy and sell interval) across various sports, sports
+                  leagues, and bet types.
+                </p>
+                <p className='mb-4'>
+                  <span className='text-[#E5C88F]'>
+                    As a member of the engineering team
+                  </span>
+                  , I leveraged this algorithm and developed an intuitive
+                  frontend calculator page, enabling users to independently
+                  assess the current value of their bets. The calculator is a
+                  simple tool for evaluating straight bets and straight bet
+                  parlays, and only represents a glimpse into the complexity of
+                  the algorithm and its full capabilities.
+                </p>
+                <div className='underline mt-4'>
+                  <a href='https://wagerwire.com/calculator'>
+                    view wagerwire.com/calculator
+                  </a>
+                </div>
+              </div>
+              <img
+                src='images/www.wagerwire.com_calculator_small.png'
+                alt=''
+                className='h-10'
+              />
+            </div>
+            <hr className='border-white border-1 my-4' />
+            <div className='flex flex-row justify-between text-[14px]'>
+              <div className='w-[40%]'>
+                <p className='mb-4'>
+                  In addition to my contributions to the algorithm and
+                  calculator page (see above) -- I engineered a dynamic graph
+                  page that enables users to visualize and track the monetary
+                  value of their bets over time, offering invaluable insights
+                  into bet value fluctuations. This page utilizes calls to an
+                  internal REST API that returns odds and comprehensive team
+                  information. From there I process the API's contents and
+                  transform it into a useable format, and apply our proprietary
+                  bet pricing algorithm. Users can build their own graphs
+                  comparing different teams and outcomes, thanks to the
+                  integration of odds and pertinent team data. Notably, the
+                  graph page includes functionality to generate shareable links,
+                  ensuring recipients accessing the link view the exact same
+                  graph. This seamless sharing capability enhances collaboration
+                  and analysis among users, making the graph page an
+                  indispensable tool for sports bettors.
+                </p>
+                <div className='underline mt-4'>
+                  <a href='https://wagerwire.com/graph'>
+                    view wagerwire.com/graph
+                  </a>
+                </div>
+              </div>
+              <img
+                src='images/www.wagerwire.com_calculator_small.png'
+                alt=''
+                className='h-10'
+              />
+            </div>
+            <hr className='border-white border-1 my-4' />
+            <div className='flex flex-row justify-between text-[14px]'>
+              <div className='w-[40%] order-last'>
+                <p className='mb-4'>
+                  In my role at WagerWire, I had the privilege of creating a
+                  vibrant community page. This dynamic hub is dedicated to
+                  fostering engagement and interaction among sports enthusiasts
+                  and bettors. Curated with diverse content including written
+                  articles, live interviews on Twitter, podcasts, and real-time
+                  sports news updates, the community page serves as a go-to
+                  destination for staying informed and connected with the latest
+                  in the sports world.
+                </p>
+                <div className='underline mt-4'>
+                  <a href='https://wagerwire.com/community'>
+                    view wagerwire.com/community
+                  </a>
+                </div>
+              </div>
+              <img
+                src='images/www.wagerwire.com_calculator_small.png'
+                alt=''
+                className='h-10'
+              />
+            </div>
+            <hr className='border-white border-1 my-4' />
+            <div className='flex flex-row justify-between text-[14px]'>
+              <div className='w-[40%] '>
+                <p className='mb-4'>
+                  This carefully crafted landing page serves as the gateway to
+                  the WagerWire platform, encapsulating the essence of
+                  WagerWire's mission and showcasing the app's features in a
+                  clear and engaging manner. Through strategic layout and
+                  user-centered design principles, I developed this intuitive
+                  interface that welcomes visitors and guides them seamlessly
+                  through WagerWire's offerings. From highlighting key app
+                  functionalities to communicating the commitment to empowering
+                  sports enthusiasts, the home page serves as a compelling
+                  introduction to the world of WagerWire.
+                </p>
+                <div className='underline mt-4'>
+                  <a href='https://wagerwire.com/community'>
+                    view wagerwire.com/community
+                  </a>
+                </div>
+              </div>
+              <img
+                src='images/www.wagerwire.com_calculator_small.png'
+                alt=''
+                className='h-10'
+              />
+            </div>
+          </div>
+        </ProjectBox>
         <ProjectBox projectName={"Goblin Frenzy"}></ProjectBox>
         <ProjectBox projectName={"Bruin Sports"}></ProjectBox>
         <ProjectBox projectName={"Mini Rogue"}></ProjectBox>
