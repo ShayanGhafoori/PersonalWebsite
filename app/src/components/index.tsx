@@ -5,5 +5,6 @@ import LastUpdated from "./LastUpdated";
 import About from "./About";
 import Header from "./Header";
 import Currently from "./Currently";
+import Footer from "./Footer";
 
-export { Nav, Home, Projects, About, LastUpdated, Header, Currently };
+export { Nav, Home, Projects, About, LastUpdated, Header, Currently, Footer };

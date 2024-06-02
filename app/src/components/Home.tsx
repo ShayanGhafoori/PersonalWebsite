@@ -1,4 +1,4 @@
-import { Header, Currently, Projects } from "./index";
+import { Header, Currently, Projects, Footer } from "./index";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <Header />
       <Currently />
       <Projects />
+      <Footer />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const WW = () => {
             proprietary algorithm for valuing sports bets, concurrently
             developing intuitive GUIs that enabled public utilization
           </p>
-          <div className='underline mt-4'>
+          <div className='underline mt-4 text-[#ffb6c1]'>
             <a href='https://wagerwire.com' target='_blank'>
               view wagerwire.com
             </a>
@@ -56,7 +56,7 @@ const WW = () => {
               represents a glimpse into the complexity of the algorithm and its
               full capabilities.
             </p>
-            <div className='underline mt-4'>
+            <div className='underline mt-4 text-[#ffb6c1]'>
               <a href='https://wagerwire.com/calculator' target='_blank'>
                 view wagerwire.com/calculator
               </a>
@@ -92,7 +92,7 @@ const WW = () => {
               among users, making the graph page an indispensable tool for
               sports bettors.
             </p>
-            <div className='underline mt-4'>
+            <div className='underline mt-4 text-[#ffb6c1]'>
               <a href='https://wagerwire.com/graph' target='_blank'>
                 view wagerwire.com/graph
               </a>
@@ -122,7 +122,7 @@ const WW = () => {
               commitment to empowering sports enthusiasts, the home page serves
               as a compelling introduction to the world of WagerWire.
             </p>
-            <div className='underline mt-4'>
+            <div className='underline mt-4 text-[#ffb6c1]'>
               <a href='https://wagerwire.com' target='_blank'>
                 view wagerwire.com
               </a>
@@ -151,7 +151,7 @@ const WW = () => {
               staying informed and connected with the latest in the sports
               world.
             </p>
-            <div className='underline mt-4'>
+            <div className='underline mt-4 text-[#ffb6c1]'>
               <a href='https://wagerwire.com/community' target='_blank'>
                 view wagerwire.com/community
               </a>
@@ -203,7 +203,7 @@ const GoblinFrenzy = () => {
               synchronizing sprite animations with character movement
             </li>
           </ul>
-          <div className='underline mt-4'>
+          <div className='underline mt-4 text-[#ffb6c1]'>
             <a
               href='https://github.com/ShayanGhafoori/Goblin-Frenzy'
               target='_blank'
@@ -242,7 +242,7 @@ const Bsports = () => {
             pick-up games across campus, alongside the ability to browse and
             RSVP to other listed games.
           </p>
-          <div className='underline mt-4'>
+          <div className='underline mt-4 text-[#ffb6c1]'>
             <a
               href='https://github.com/maxdalton01/bSports/tree/ShayanBranch'
               target='_blank'
@@ -285,7 +285,7 @@ const MiniRogue = () => {
               weaknesses, adding depth and strategy to gameplay.
             </li>
           </ul>
-          <div className='underline mt-4'>
+          <div className='underline mt-4 text-[#ffb6c1]'>
             <a
               href='https://github.com/ShayanGhafoori/Mini-Rogue'
               target='_blank'
@@ -303,7 +303,7 @@ const TeslaPredictor = () => {
   return (
     <div className='uppercase mt-4 px-2'>
       <div className='flex flex-row justify-between text-[14px]'>
-        <div className='w-[45%]'>
+        <div className='w-[50%]'>
           <div className='mb-4 normal-case text-[#E5C88F] text-[16px] font-semibold'>
             Python, R
           </div>
@@ -311,18 +311,21 @@ const TeslaPredictor = () => {
             Leveraged a maximum likelihood approach to linear regression
             (considering Gaussian noise), z-score normalization, and recursive
             feature elimination with 10-fold cross-validation to develop an
-            algorithm that predicts Tesla's stock price
+            algorithm that predicts Tesla's stock price using average
+            mean-squared error as the evaluation metric for choosing the optimal
+            features of the model
           </p>
-          <div className='underline mt-4'>
+          <div className='underline mt-4 text-[#ffb6c1]'>
             <a href='documents/TeslaStock.pdf' target='_blank'>
               Read the Paper
             </a>
           </div>
         </div>
+
         <a
           href='documents/TeslaStock.pdf'
           target='_blank'
-          className='w-[40%] flex flex-col justify-center'
+          className='w-[36%] flex flex-col justify-center'
         >
           <img src='images/TeslaStock.jpg' />
         </a>
@@ -378,7 +381,7 @@ const Projects = () => {
         <ProjectBox projectName={"Tesla Stock Predictor"} defaultState={true}>
           <TeslaPredictor />
         </ProjectBox>
-        <ProjectBox projectName={"WagerWire"} defaultState={true}>
+        <ProjectBox projectName={"WagerWire"}>
           <WW />
         </ProjectBox>
         <ProjectBox projectName={"Goblin Frenzy"}>
