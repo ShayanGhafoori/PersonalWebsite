@@ -2,8 +2,8 @@ import { Fade } from "react-awesome-reveal";
 
 const Currently = () => {
   return (
-    <div className='text-[90px] uppercase h-full min-h-screen pt-36 '>
-      <Fade duration={2700} delay={300} triggerOnce>
+    <div className='text-[80px] lg:text-[90px] uppercase h-full min-h-screen pt-36 lg:pt-[10%] '>
+      <Fade duration={2700} delay={300} fraction={0.65} triggerOnce>
         <h2 className='text-[24px]'> Currently I am...</h2>
         <h1 className='mt-12 tracking-[-0.4rem] leading-[5rem] font-black text-white'>
           Working full-time as a{" "}
