@@ -8,8 +8,8 @@ const Currently = () => {
         <h1
           className='mt-12 font-black text-white'
           style={{
-            fontSize: "7vw",
-            lineHeight: "6.4vw",
+            fontSize: "6.5vw",
+            lineHeight: "6vw",
             letterSpacing: "-0.5vw",
           }}
         >
