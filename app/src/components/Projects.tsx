@@ -128,7 +128,7 @@ const ProjectBox: React.FC<{
 };
 
 const Projects = () => {
-  ReactGA.send({ hitType: "pageview", page: "/", title: "Home" });
+  ReactGA.send({ hitType: "pageview", page: "#projects", title: "Projects" });
   return (
     <div className='h-full min-h-screen pt-36 pb-10'>
       <Fade triggerOnce fraction={0.75}>
