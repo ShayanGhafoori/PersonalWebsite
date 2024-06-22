@@ -46,6 +46,7 @@ const ProjectBox: React.FC<{
   projectPoster?: string;
   reverseOrder?: boolean;
   projectBullets?: string[];
+  lowPowerMode?: boolean;
 }> = ({
   projectLanguage,
   projectDescription,
@@ -57,23 +58,8 @@ const ProjectBox: React.FC<{
   projectPoster,
   reverseOrder,
   projectBullets,
+  lowPowerMode,
 }) => {
-  const lowPowerModeDetection = useRef<HTMLVideoElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [lowPowerMode, setLowPowerMode] = useState(false);
-
-  useEffect(() => {
-    console.log("lower power mode is ", lowPowerMode);
-    if (lowPowerModeDetection.current) {
-      lowPowerModeDetection.current.play().catch(() => {
-        // If autoplay fails - assume low power mode.
-        setLowPowerMode(true);
-      });
-    }
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2.0;
-    }
-  }, [lowPowerMode]);
   return (
     <div className='uppercase mt-4 px-2'>
       <div className='flex flex-col md:flex-row justify-between text-[14px]'>
@@ -129,6 +115,18 @@ const ProjectBox: React.FC<{
 
 const Projects = () => {
   ReactGA.send({ hitType: "pageview", page: "#projects", title: "Projects" });
+  const lowPowerModeDetection = useRef<HTMLVideoElement>(null);
+  const [lowPowerMode, setLowPowerMode] = useState(false);
+
+  useEffect(() => {
+    console.log("lower power mode is ", lowPowerMode);
+    if (lowPowerModeDetection.current) {
+      lowPowerModeDetection.current.play().catch(() => {
+        // If autoplay fails - assume low power mode.
+        setLowPowerMode(true);
+      });
+    }
+  }, [lowPowerMode]);
   return (
     <div className='h-full min-h-screen pt-36 pb-10'>
       <Fade triggerOnce fraction={0.75}>
@@ -152,6 +150,7 @@ const Projects = () => {
             algorithm that predicts Tesla's stock price using average
             mean-squared error as the evaluation metric for choosing the optimal
             features of the model"
+            lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
         <ProjectFrame projectName={"WagerWire"}>
@@ -161,6 +160,7 @@ const Projects = () => {
             startup where I worked as both a Software Engineer and Data analyst building a 
             proprietary algorithm for valuing sports bets, concurrently
             developing intuitive GUIs that enabled public utilization'
+            lowPowerMode={lowPowerMode}
           />
           <hr className='border-white border-1 mt-4' />
           <ProjectBox
@@ -177,6 +177,7 @@ const Projects = () => {
             From highlighting key app functionalities to communicating the
             commitment to empowering sports enthusiasts, the home page serves
             as a compelling introduction to the world of WagerWire."
+            lowPowerMode={lowPowerMode}
           />
           <hr className='border-white border-1 mt-4' />
 
@@ -190,6 +191,7 @@ const Projects = () => {
             projectDescription="As a key member of the data team, I created a sports bet pricing algorithm by analyzing extensive betting data. 
             This model accurately values bets across sports and bet types, factoring in line and odds movements, and sports dynamics. On the engineering team, 
             I used this algorithm to develop a user-friendly calculator page, enabling users to assess their bet values, showcasing the algorithm's complexity and capabilities."
+            lowPowerMode={lowPowerMode}
           />
           <hr className='border-white border-1 mt-4' />
           <ProjectBox
@@ -203,6 +205,7 @@ const Projects = () => {
             projectDescription='In addition to the algorithm and calculator page, I engineered a dynamic graph page that visualizes and tracks the monetary value of bets over time. 
             This page calls an internal REST API for odds and team information, processes the data, and applies our pricing algorithm. Users can build and compare graphs for different teams and outcomes. 
             The page also generates shareable links, ensuring recipients see the same graph, enhancing collaboration and analysis for sports bettors.'
+            lowPowerMode={lowPowerMode}
           />
           <hr className='border-white border-1 mt-4' />
           <ProjectBox
@@ -220,6 +223,7 @@ const Projects = () => {
             updates, the community page serves as a go-to destination for
             staying informed and connected with the latest in the sports
             world.'
+            lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
         <ProjectFrame projectName={"Goblin Frenzy"}>
@@ -242,6 +246,7 @@ const Projects = () => {
               "Developed a custom -- quasi Dijkstra's -- algorithm to ensure goblins take the shortest path to the player while preventing infinite looping of sprite animations",
               "Maximized gameplay experience by accounting for variables such as angle of attack, health status, user input, and collisions when synchronizing sprite animations with character movement",
             ]}
+            lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
         <ProjectFrame projectName={"Bruin Sports"}>
@@ -256,6 +261,7 @@ const Projects = () => {
             provides a platform for UCLA students to register and organize
             pick-up games across campus, alongside the ability to browse and
             RSVP to other listed games.'
+            lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
         <ProjectFrame projectName={"Mini Rogue"}>
@@ -273,6 +279,7 @@ const Projects = () => {
             projectBullets={[
               "Crafted a custom, progressive algorithm for dynamically generating randomized dungeon layouts, weapons, and enemies at each level",
             ]}
+            lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
       </Fade>
