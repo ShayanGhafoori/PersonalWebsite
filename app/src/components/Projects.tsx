@@ -129,6 +129,17 @@ const Projects = () => {
   }, [lowPowerMode]);
   return (
     <div className='h-full min-h-screen pt-36 pb-10'>
+      {/* Hidden video to check lower power mode */}
+      <video
+        ref={lowPowerModeDetection}
+        muted
+        playsInline
+        autoPlay={false}
+        controls={false}
+        className={"hidden h-0 w-0"}
+      >
+        <source src={""} type='' />
+      </video>
       <Fade triggerOnce fraction={0.75}>
         <div className='uppercase mb-4'>
           <h1 className='mt-12 tracking-[-0.05rem] md:tracking-[-0.15rem] lg:tracking-[-0.25rem] font-semibold text-[#5C5C5C] text-[36px] md:text-[60px] lg:text-[75px]'>
