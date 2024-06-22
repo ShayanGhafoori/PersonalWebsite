@@ -114,7 +114,6 @@ const ProjectBox: React.FC<{
 };
 
 const Projects = () => {
-  ReactGA.send({ hitType: "pageview", page: "#projects", title: "Projects" });
   const lowPowerModeDetection = useRef<HTMLVideoElement>(null);
   const [lowPowerMode, setLowPowerMode] = useState(false);
 
