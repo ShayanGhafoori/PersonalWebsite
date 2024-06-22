@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import { VideoObserver } from "./index";
+import ReactGA from "react-ga4";
 
 const ProjectFrame: React.FC<{
   projectName: string;
@@ -127,6 +128,7 @@ const ProjectBox: React.FC<{
 };
 
 const Projects = () => {
+  ReactGA.send({ hitType: "pageview", page: "/", title: "Home" });
   return (
     <div className='h-full min-h-screen pt-36 pb-10'>
       <Fade triggerOnce fraction={0.75}>
