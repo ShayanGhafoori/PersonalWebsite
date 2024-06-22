@@ -10,7 +10,7 @@ const Currently = () => {
           style={{
             fontSize: "6.5vw",
             lineHeight: "6vw",
-            letterSpacing: "-0.5vw",
+            letterSpacing: "-0.3vw",
           }}
         >
           Working full-time as a{" "}

@@ -1,5 +1,4 @@
 import { Home, Projects, About } from "./components";
-import { WagerWire } from "./components/details-pages";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -10,11 +9,6 @@ const App = () => {
           <Route path='/' exact={true} element={<Home />} />
           <Route path='/projects' exact={true} element={<Projects />} />
           <Route path='/about' exact={true} element={<About />} />
-          <Route
-            path='/details-wagerwire'
-            exact={true}
-            element={<WagerWire />}
-          />
         </Routes>
       </HashRouter>
     </body>
