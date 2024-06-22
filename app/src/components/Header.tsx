@@ -24,7 +24,7 @@ const Header = () => {
             strings={[
               "<span style='color:white;'>Software Engineer</span> who uses <span style='color:white;'>data science</span> to build cool stuff.",
             ]}
-            typeSpeed={50}
+            typeSpeed={40}
             onComplete={() => setComplete(true)}
             showCursor={false}
           />
