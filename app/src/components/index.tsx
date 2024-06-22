@@ -6,5 +6,6 @@ import About from "./About";
 import Header from "./Header";
 import Currently from "./Currently";
 import Footer from "./Footer";
+import { VideoObserver } from "./VideoObserver";
 
-export { Nav, Home, Projects, About, LastUpdated, Header, Currently, Footer };
+export { Nav, Home, Projects, About, LastUpdated, Header, Currently, Footer, VideoObserver};

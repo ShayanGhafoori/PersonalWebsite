@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
+import { VideoObserver } from "./index";
 
 const ProjectFrame: React.FC<{
   projectName: string;
@@ -56,14 +57,30 @@ const ProjectBox: React.FC<{
   reverseOrder,
   projectBullets,
 }) => {
+  const lowPowerModeDetection = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [lowPowerMode, setLowPowerMode] = useState(false);
+
+  useEffect(() => {
+    console.log("lower power mode is ", lowPowerMode);
+    if (lowPowerModeDetection.current) {
+      lowPowerModeDetection.current.play().catch(() => {
+        // If autoplay fails - assume low power mode.
+        setLowPowerMode(true);
+      });
+    }
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2.0;
+    }
+  }, [lowPowerMode]);
   return (
     <div className='uppercase mt-4 px-2'>
       <div className='flex flex-col md:flex-row justify-between text-[14px]'>
         <div
           className={
             reverseOrder
-              ? "md:w-[50%] mb-8 md:mb-0 md:order-last"
-              : "md:w-[50%] mb-8 md:mb-0"
+              ? "md:w-[45%] mb-8 md:mb-0 md:order-last"
+              : "md:w-[45%] mb-8 md:mb-0"
           }
         >
           <div className='mb-4 normal-case text-[#E5C88F] text-[16px] font-semibold'>
@@ -88,17 +105,19 @@ const ProjectBox: React.FC<{
         </div>
         {!isVideo
           ? projectMedia && (
-              <div className='md:w-[36%] flex flex-col justify-center'>
+              <div className='md:w-[45%] flex flex-col justify-center'>
                 <img src={projectMedia} />
               </div>
             )
           : projectMedia && (
-              <div className='md:w-[45%] flex flex-col justify-center'>
-                <video
+              <div className='md:w-[50%] flex flex-col justify-center'>
+                <VideoObserver
                   src={projectMedia}
-                  className='rounded-[12px] border-2 border-[#5C5C5C]'
-                  controls
                   poster={projectPoster}
+                  staticFallback={projectPoster}
+                  playBackRate={3}
+                  lowPowerMode={lowPowerMode}
+                  loop={true}
                 />
               </div>
             )}
@@ -151,10 +170,7 @@ const Projects = () => {
             projectLink='https://wagerwire.com'
             projectLinkDescription='View wagerwire.com'
             projectDescription="This carefully crafted landing page serves as the gateway to the
-            WagerWire platform, encapsulating the essence of WagerWire's
-            mission and showcasing the app's features in a clear and engaging
-            manner. Through strategic layout and user-centered design
-            principles, I developed this intuitive interface that welcomes
+            WagerWire platform. I developed this intuitive interface that welcomes
             visitors and guides them seamlessly through WagerWire's offerings.
             From highlighting key app functionalities to communicating the
             commitment to empowering sports enthusiasts, the home page serves
@@ -169,22 +185,9 @@ const Projects = () => {
             projectPoster='images/CalcPage-poster.png'
             projectLink='https://wagerwire.com/calculator'
             projectLinkDescription='View wagerwire.com/calculator'
-            projectDescription='As an integral member of the data team, I played a pivotal role in the creation of our
-            proprietary sports bet pricing algorithm. Collaborating closely
-            with colleagues, I meticulously gathered and analyzed 22 years of
-            sports betting data, resulting in a model capable of accurately
-            pricing/valuing bets across various sports and bet types. The
-            model factors in variables such as line movement, odds movement,
-            bet type, and specific sports dynamics. The formulation of this
-            model involved the development of other models, such as ones to
-            accurately predict the distribution of percent change in bet value
-            (from any given buy and sell interval) across various sports,
-            sports leagues, and bet types. As a member of the engineering team, I leveraged this algorithm and developed an intuitive frontend
-            calculator page, enabling users to independently assess the
-            current value of their bets. The calculator is a simple tool for
-            evaluating straight bets and straight bet parlays, and only
-            represents a glimpse into the complexity of the algorithm and its
-            full capabilities.'
+            projectDescription="As a key member of the data team, I created a sports bet pricing algorithm by analyzing extensive betting data. 
+            This model accurately values bets across sports and bet types, factoring in line and odds movements, and sports dynamics. On the engineering team, 
+            I used this algorithm to develop a user-friendly calculator page, enabling users to assess their bet values, showcasing the algorithm's complexity and capabilities."
           />
           <hr className='border-white border-1 mt-4' />
           <ProjectBox
@@ -195,21 +198,9 @@ const Projects = () => {
             projectPoster='images/GraphPage-poster.png'
             projectLink='https://wagerwire.com/graph'
             projectLinkDescription='View wagerwire.com/graph'
-            projectDescription='In addition to my contributions to the algorithm and calculator
-            page (see above) -- I engineered a dynamic graph page that enables
-            users to visualize and track the monetary value of their bets over
-            time, offering invaluable insights into bet value fluctuations.
-            This page utilizes calls to an internal REST API that returns odds
-            and comprehensive team information. From there I process the APIs
-            contents and transform it into a useable format, and apply our
-            proprietary bet pricing algorithm. Users can build their own
-            graphs comparing different teams and outcomes, thanks to the
-            integration of odds and pertinent team data. Notably, the graph
-            page includes functionality to generate shareable links, ensuring
-            recipients accessing the link view the exact same graph. This
-            seamless sharing capability enhances collaboration and analysis
-            among users, making the graph page an indispensable tool for
-            sports bettors.'
+            projectDescription='In addition to the algorithm and calculator page, I engineered a dynamic graph page that visualizes and tracks the monetary value of bets over time. 
+            This page calls an internal REST API for odds and team information, processes the data, and applies our pricing algorithm. Users can build and compare graphs for different teams and outcomes. 
+            The page also generates shareable links, ensuring recipients see the same graph, enhancing collaboration and analysis for sports bettors.'
           />
           <hr className='border-white border-1 mt-4' />
           <ProjectBox
@@ -231,6 +222,9 @@ const Projects = () => {
         </ProjectFrame>
         <ProjectFrame projectName={"Goblin Frenzy"}>
           <ProjectBox
+            isVideo
+            projectMedia='images/goblin-frenzy-demo.mp4'
+            projectPoster='images/goblin-frenzy-poster.png'
             projectLanguage='Python'
             projectLink='https://github.com/ShayanGhafoori/Goblin-Frenzy'
             projectLinkDescription='View the Github'
