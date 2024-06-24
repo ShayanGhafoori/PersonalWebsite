@@ -163,7 +163,7 @@ const Projects = () => {
             lowPowerMode={lowPowerMode}
           />
         </ProjectFrame>
-        <ProjectFrame projectName={"WagerWire"}>
+        <ProjectFrame projectName={"WagerWire.com"}>
           <ProjectBox
             projectLanguage='React.js, Tailwind, Sanity.io, Python, R'
             projectDescription='Professional project from my time at WagerWire, a sports betting
