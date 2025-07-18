@@ -16,8 +16,8 @@ const Currently = () => {
           Working full-time as a{" "}
           <span className='text-[#E5C88F]'> Software Engineer</span> at Raytheon
           Technologies while pursuing my M.S. in
-          <span className='text-[#E5C88F]'> Machine Learning</span> from The
-          University of Arizona
+          <span className='text-[#E5C88F]'> Computer Science </span> from
+          Georgia Institute of Technology
         </h1>
       </Fade>
     </div>
